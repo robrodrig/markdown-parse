@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class MarkdownParse {
     public static ArrayList<String> getLinks(String markdown) {
@@ -18,7 +19,7 @@ public class MarkdownParse {
         //Then we look for an open paren but there are no more open paren
         //This results in an infinite loop (which is the error we are gett)
 
-        // Stack<String> parenParity = new Stack<>();
+        Stack<String> parenParity = new Stack<>();
         //if we find an open bracket/parenthesis push into stack
         //if we find a closing bracket/parenthesis and the top of the stack is 
         /*
