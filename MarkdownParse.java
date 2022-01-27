@@ -65,7 +65,7 @@ public class MarkdownParse {
                 } 
             }
 
-            if (check == false && (nextCloseBracket + != nextOpenBracket) =1) && (nextCloseBracket == openParen - 1 )) {
+            if (check == false && (nextCloseBracket != nextOpenBracket + 1) && (nextCloseBracket == openParen - 1 )) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             currentIndex = closeParen + 1;

@@ -20,7 +20,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         this.strList = MarkdownParse.getLinks(contents);
 
-        assertEquals(List.of("https://something.com", "some-page.html", this.strList));
+        assertEquals(List.of("https://something.com", "some-page.html"), this.strList);
     } 
 
     @Test
@@ -57,7 +57,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         this.strList = MarkdownParse.getLinks(contents);
 
-        assertEquals(List.of("page.com"), this.strList);
+        assertEquals(List.of(), this.strList);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         this.strList = MarkdownParse.getLinks(contents);
 
-        assertEquals(List.of("www.a-link-on-the-first-line"), this.strList);
+        assertEquals(List.of(), this.strList);
     }
 
 }
