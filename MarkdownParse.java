@@ -56,6 +56,7 @@ public class MarkdownParse {
             if (nextOpenBracket == -1 || nextCloseBracket == -1 || openParen == -1 || closeParen == -1) break;
             if ( markdown.substring(openParen + 1, closeParen).contains(" ") ) break;
 
+
             //run for loop and .contains on the substring?
             boolean check = false;
             for ( String s : imageExtensions ){
