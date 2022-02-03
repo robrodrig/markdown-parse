@@ -58,20 +58,20 @@ public class MarkdownParse {
 
 
             //run for loop and .contains on the substring?
-            boolean check = false;
-            for ( String s : imageExtensions ){
-                if (markdown.substring(openParen+1, closeParen).contains(s)){
+             boolean check = true;
+             for ( String s : imageExtensions ){
+                 if (markdown.substring(openParen+1, closeParen).contains(s)){
                     check = true;
                     break;
                 } 
-            }
+             }
 
             if (check == false && (nextCloseBracket != nextOpenBracket + 1) && (nextCloseBracket == openParen - 1 )) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             currentIndex = closeParen + 1;
         }
-        return toReturn;
+         return toReturn;
     }
     
     public static void main(String[] args) throws IOException {
