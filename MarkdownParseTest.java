@@ -84,7 +84,7 @@ public class MarkdownParseTest {
         String contents = Files.readString(fileName);
         this.strList = MarkdownParse.getLinks(contents);
 
-        assertEquals(List.of("anything here"), this.strList);
+        assertEquals(List.of(), this.strList);
     }
 
 }
